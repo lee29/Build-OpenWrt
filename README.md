@@ -1,13 +1,10 @@
 # 择要
 
-- ### 《[Telegram聊天吹水群](https://t.me/heiheiheio)》
+- 《[此仓库不再更新，你们可以使用我的新仓库或者在我新仓库找文件来更新此仓库也可以，随便你们整，高兴就好，点击这里可以跳到我新仓库！](https://github.com/281677160/AutoBuild-OpenWrt)》
 
-- Lede_source=18.06=5.4
-- Lienol_source=19.07=4.14
-- Project_source=18.06=4.19
-- Spirit_source=21.02=5.4
+- 《[Telegram聊天吹水群](https://t.me/heiheiheio)》
 
-- ### 《[本地Ubuntu使用此项目一键编译](https://github.com/danshui-git/shuoming/blob/master/bendi.md)》
+- 《[本地Ubuntu使用此项目一键编译](https://github.com/danshui-git/shuoming/blob/master/bendi.md)》
 
 - 《[把定时更新插件编译进固件的说明](https://github.com/danshui-git/shuoming/blob/master/%E5%AE%9A%E6%97%B6%E6%9B%B4%E6%96%B0%E6%8F%92%E4%BB%B6.md)》
 
