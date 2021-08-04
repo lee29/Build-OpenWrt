@@ -1,0 +1,13 @@
+5 0 * * * sleep 70s; /usr/share/jd-dailybonus/newapp.sh -w
+1 4 * * * /usr/share/jd-dailybonus/newapp.sh -u
+*/40 * * * * /etc/init.d/frp restart
+0 6 * * * /usr/share/adbyby/adblock.sh > /tmp/adupdate.log 2>&1
+0 3 * * * lua /usr/share/passwall/rule_update.lua log > /dev/null 2>&1 &
+0 2 * * * /usr/share/UnblockNeteaseMusic/update_core.sh 2>&1
+0 7 * * * service firewall restart
+0 12 * * * service firewall restart
+0 18 * * * service firewall restart
+0 7 * * * /etc/init.d/dnsmasq restart
+0 12 * * * /etc/init.d/dnsmasq restart
+0 18 * * * /etc/init.d/dnsmasq restart
+*/6 * * * * /etc/init.d/frpgl start 2>/dev/null

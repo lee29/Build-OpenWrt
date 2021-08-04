@@ -1,0 +1,14 @@
+
+config adbyby
+	option daemon '2'
+	option lan_mode '0'
+	option cron_mode '1'
+	option block_ios '0'
+	option wan_mode '1'
+	option mem_mode '1'
+	option update_source '1'
+	option block_douyin '0'
+	list subscribe_url 'https://cdn.jsdelivr.net/gh/hackl0us/AdBlock-Rules-Mirror/Easylist-China.txt'
+	list subscribe_url 'https://cdn.jsdelivr.net/gh/hackl0us/AdBlock-Rules-Mirror/AdGuard-Simplified-Domain-Names-Filter.txt'
+	option enable '1'
+

@@ -1,0 +1,12 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+chmod +x /usr/bin/webd
+/usr/bin/webd &>/dev/null &
+chmod -R 0777 /usr/bin/frpc
+chmod +x /etc/init.d/frpgl
+
+exit 0
+
+
+

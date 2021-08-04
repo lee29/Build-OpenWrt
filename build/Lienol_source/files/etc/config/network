@@ -1,0 +1,53 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option type 'bridge'
+	option ifname 'eth0.1'
+	option proto 'static'
+	option ipaddr '192.168.0.1'
+	option netmask '255.255.255.0'
+	option gateway '192.168.2.1'
+	option dns '114.114.114.114 223.5.5.5'
+	option broadcast '192.168.2.225'
+	option delegate '0'
+	option mtu '1480'
+
+config device 'lan_eth0_1_dev'
+	option name 'eth0.1'
+	option macaddr '46:e8:2d:b9:be:62'
+
+config interface 'wan'
+	option ifname 'eth0.2'
+	option _orig_ifname 'eth0.2'
+	option _orig_bridge 'false'
+	option proto 'pppoe'
+	option username 'wen401'
+	option password '8558612'
+	option keepalive '3600 15000'
+	option delegate '0'
+	option mtu '1480'
+
+config device 'wan_eth0_2_dev'
+	option name 'eth0.2'
+	option macaddr '46:e8:2d:b9:be:63'
+
+config switch
+	option name 'switch0'
+	option reset '1'
+	option enable_vlan '1'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '1'
+	option ports '1 2 3 6t'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '2'
+	option ports '4 6t'
+
