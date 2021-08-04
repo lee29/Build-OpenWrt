@@ -1,0 +1,6 @@
+
+config flow
+	option bbr '0'
+	option flow_offloading '0'
+	option dns '0'
+

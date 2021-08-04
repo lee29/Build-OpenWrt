@@ -1,0 +1,24 @@
+
+config upnpd 'config'
+	option download '1024'
+	option upload '512'
+	option internal_iface 'lan'
+	option port '5000'
+	option upnp_lease_file '/var/upnp.leases'
+	option enabled '1'
+	option uuid 'c10a093b-3795-4a34-add3-51dc78edd871'
+
+config perm_rule
+	option action 'allow'
+	option int_addr '0.0.0.0/0'
+	option comment 'Allow high ports'
+	option int_ports '0-65535'
+	option ext_ports '0-65535'
+
+config perm_rule
+	option ext_ports '0-65535'
+	option int_addr '0.0.0.0/0'
+	option int_ports '0-65535'
+	option comment 'Default deny'
+	option action 'allow'
+

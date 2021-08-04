@@ -1,0 +1,9 @@
+
+config global
+	option post_max_size '100M'
+	option upload_max_filesize '100M'
+	option enable '1'
+	option project_directory '/mnt/sda/kodexplorer'
+	option storage_device_path '/mnt/sda/'
+	option memory_limit '150M'
+	option port '8081'

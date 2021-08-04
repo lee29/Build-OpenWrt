@@ -1,0 +1,57 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fdca:e61e:1bae::/48'
+
+config interface 'lan'
+	option type 'bridge'
+	option proto 'static'
+	option ipaddr '192.168.0.1'
+	option netmask '255.255.255.0'
+	option gateway '192.168.0.1'
+	option dns '114.114.114.114 223.5.5.5'
+	option broadcast '192.168.0.225'
+	option _orig_ifname 'lan1 lan2 lan3 ra0 rai0 wlan0 wlan1'
+	option _orig_bridge 'true'
+	option ifname 'lan1 lan2 lan3'
+
+config device 'lan_lan1_dev'
+	option name 'lan1'
+	option macaddr 'e2:78:ba:99:22:b3'
+
+config device 'lan_lan2_dev'
+	option name 'lan2'
+	option macaddr 'e2:78:ba:99:22:b3'
+
+config device 'lan_lan3_dev'
+	option name 'lan3'
+	option macaddr 'e2:78:ba:99:22:b3'
+
+config device 'lan_ra0_dev'
+	option name 'ra0'
+	option macaddr 'e2:78:ba:99:22:b3'
+
+config device 'lan_rai0_dev'
+	option name 'rai0'
+	option macaddr 'e2:78:ba:99:22:b3'
+
+config interface 'wan'
+	option ifname 'wan'
+	option _orig_ifname 'wan'
+	option _orig_bridge 'false'
+	option proto 'pppoe'
+	option username 'wen401'
+	option password '8558612'
+	option keepalive '0'
+	option delegate '0'
+	option ipv6 '0'
+
+config device 'wan_wan_dev'
+	option name 'wan'
+	option macaddr 'e2:78:ba:99:22:b4'
+

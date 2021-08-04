@@ -1,0 +1,10 @@
+
+config global
+	option primary '##f90'
+	option blur '10'
+	option blur_dark '10'
+	option transparency '0.5'
+	option transparency_dark '0.5'
+	option save '保存更改'
+	option dark_primary '#f90'
+	option mode 'dark'
