@@ -5,7 +5,7 @@ START=200
 STOP=150
 
 start() {
-        frpc_count=`ps | grep /koolshare/frpc/frpc | grep -v "grep"  | wc -l`
+        frpc_count=`ps | grep /usr/bin/frpc | grep -v "grep"  | wc -l`
         if [ $frpc_count -eq 0 ]; then
                 echo 没有运行，正在启动...
                 /usr/bin/frpc -c /etc/config/frpc &
@@ -18,7 +18,7 @@ start() {
 }                 
 
 stop() {   
-        frpc_count=`ps | grep /koolshare/frpc/frpc | grep -v "grep"  | wc -l`
+        frpc_count=`ps | grep /usr/bin/frpc | grep -v "grep"  | wc -l`
         if [ $frpc_count -eq 0 ]; then
                 echo 没有运行，无需停止
                 else

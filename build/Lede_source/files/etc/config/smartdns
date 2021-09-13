@@ -62,3 +62,4 @@ config server
 	option name 'CNNIC'
 	option ip '1.2.4.8'
 	option port '53'
+

@@ -4,8 +4,7 @@ config defaults
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'REJECT'
-	option fullcone '1'
-	option flow_offloading '0'
+	option fullcone '0'
 
 config zone
 	option name 'lan'
