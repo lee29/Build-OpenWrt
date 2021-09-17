@@ -214,7 +214,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: .config_${{ env.CODE }}_${{ env.TARGET_PROFILE }}_${{ env.date }}
-        path: openwrt/bin/config
+        path: openwrt
     
     - name: 整理发布信息
       run: |
@@ -225,11 +225,4 @@ jobs:
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "##### WETRANSFER：$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> update_log.txt
     
-    - name: 发布固件
-      uses: ncipollo/release-action@v1
-      with:
-        name: ${{ env.CODE }}-${{ env.TARGET_PROFILE }}
-        tag: ${{ env.date2 }}
-        token: ${{ secrets.REPO_TOKEN }}
-        bodyFile: "update_log.txt"
-        artifacts: "${{ env.FIRMWARE }}/*"
+
