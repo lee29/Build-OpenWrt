@@ -8,4 +8,5 @@ config global
 	option save '保存更改'
 	option dark_primary '#f90'
 	option mode 'dark'
+	option bing_background '1'
 
